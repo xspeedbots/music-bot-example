@@ -492,15 +492,7 @@ function play(guild, song) {
         }
     });
 }
-client.on('ready', () => {
-    // Set bot status to: "Playing with JavaScript"
-    client.user.setActivity("X-SPEED", {type: "WATCHING"})
 
-    // Alternatively, you can set the activity to any of the following:
-    // PLAYING, STREAMING, LISTENING, WATCHING
-    // For example:
-    // client.user.setActivity("TV", {type: "WATCHING"})
-})
 
 bot.login(process.env.BOT_TOKEN);
 
