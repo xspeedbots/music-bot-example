@@ -11,7 +11,9 @@ const bot = new Client({
 const PREFIX = process.env.PREFIX;
 const youtube = new YouTube(process.env.YTAPI_KEY);
 const queue = new Map();
-
+bot.on('ready', () => {
+  bot.user.setActivity('X-SPEED', { type: 'WATCHING' })
+})
 bot.on("warn", console.warn);
 bot.on("error", console.error);
 bot.on("ready", () => console.log(`[READY] ${bot.user.tag} has been successfully booted up!`));
