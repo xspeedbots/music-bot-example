@@ -46,7 +46,7 @@ bot.on("message", async (message) => { // eslint-disable-line
             .setColor("BLUE")
             .setAuthor(bot.user.tag, bot.user.displayAvatarURL())
             .setDescription(`
-__**اللائحة**__
+__**لائحة الأوامر**__
 > \`!play [عنوان/رابط]\`**
 > \`!search [عنوان]\`**
 > \`!skip :لتخطي الموسيقى الحالية\`**
