@@ -51,7 +51,7 @@ __**Command list**__
 > \`!search [عنوان]\`**
 > \`!skip :لتخطي الموسيقى الحالية\`**
 > \`!stop: لايقاف تشغيل الموسيقى \`**
-> \`!pause: ايقاف الموسيقى موقتا\`**
+> \`!pause: ايقاف الموسيقى موقتا\`
 > \`!resume: اتمام الموسيقى\`
 > \`nowplaying\`, \`queue\`, \`volume\``)
             .setFooter("©️ 2020 X-SPEED#3102", "https://icon-library.com/images/music-bot-icon/music-bot-icon-12.jpg");
