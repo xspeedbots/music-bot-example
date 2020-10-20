@@ -45,8 +45,9 @@ bot.on("message", async (message) => { // eslint-disable-line
         const helpembed = new MessageEmbed()
             .setColor("BLUE")
             .setAuthor(bot.user.tag, bot.user.displayAvatarURL())
-            .setDescription(`
-__**Command list**__
+         قائمة الأوامر
+   .setDescription(`
+__**قائمة الأوامر**__
 > \`play\` > **\`play [عنوان/رابط]\`**
 > \`search\` > **\`search [عنوان]\`**
 > \`skip\`, \`stop\`,  \`pause\`, \`resume\`
@@ -95,7 +96,7 @@ __**Command list**__
             return message.channel.send({
                 embed: {
                     color: "GREEN",
-                    description: `✅  **|**  Playlist: **\`${playlist.title}\`** has been added to the queue`
+                    description: `✅  **|**  قائمة التشغيل: **\`${playlist.title}\`** تمت إضافته إلى قائمة الانتظار`
                 }
             });
         } else {
