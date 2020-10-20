@@ -108,7 +108,7 @@ __**Command list**__
                     if (!video) return message.channel.send({
                         embed: {
                             color: "RED",
-                            description: "🆘  **|**  I could not obtain any search results"
+                            description: "🆘  **|**  لم أستطع الحصول على أي نتائج بحث
                         }
                     });
                 } catch (err) {
@@ -116,7 +116,7 @@ __**Command list**__
                     return message.channel.send({
                         embed: {
                             color: "RED",
-                            description: "🆘  **|**  I could not obtain any search results"
+                            description: "🆘  **|**  لم أستطع الحصول على أي نتائج بحث
                         }
                     });
                 }
@@ -129,7 +129,7 @@ __**Command list**__
         if (!voiceChannel) return message.channel.send({
             embed: {
                 color: "RED",
-                description: "I'm sorry, but you need to be in a voice channel to play a music!"
+                description: "أنا آسف ، لكن يجب أن تكون في قناة صوتية لتشغيل موسيقى!"
             }
         });
         const permissions = voiceChannel.permissionsFor(message.client.user);
