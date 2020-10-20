@@ -46,14 +46,14 @@ bot.on("message", async (message) => { // eslint-disable-line
             .setColor("BLUE")
             .setAuthor(bot.user.tag, bot.user.displayAvatarURL())
             .setDescription(`
-__**Command list**__
+__**اللائحة**__
 > \`!play [عنوان/رابط]\`**
 > \`!search [عنوان]\`**
 > \`!skip :لتخطي الموسيقى الحالية\`**
 > \`!stop: لايقاف تشغيل الموسيقى \`**
 > \`!pause: ايقاف الموسيقى موقتا\`
 > \`!resume: اتمام الموسيقى\`
-> \`nowplaying\`, \`queue\`, \`volume\``)
+> \`!nowplaying\`, \`!queue\`, \`!volume\``)
             .setFooter("©️ 2020 X-SPEED#3102", "https://icon-library.com/images/music-bot-icon/music-bot-icon-12.jpg");
         message.channel.send(helpembed);
     }
