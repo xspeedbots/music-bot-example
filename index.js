@@ -44,7 +44,7 @@ bot.on("message", async (message) => { // eslint-disable-line
     if (command === "help" || command === "cmd") {
         const helpembed = new MessageEmbed()
             .setColor("BLUE")
-            .setAuthor(bot.user.displayAvatarURL(),'test')
+            .setAuthor('test')
             .setDescription(`
 __**لائحة الأوامر**__
 > \`!play [عنوان/رابط]\`**
