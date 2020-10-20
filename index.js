@@ -49,9 +49,10 @@ bot.on("message", async (message) => { // eslint-disable-line
 __**Command list**__
 > \`!play [عنوان/رابط]\`**
 > \`!search [عنوان]\`**
-> \`skip :لتخطي الاغنية الحالية\`**
-> \`stop: لايقاف تشغيل الاغاني \`**
->\`pause\`, \`resume\`
+> \`!skip :لتخطي الموسيقى الحالية\`**
+> \`!stop: لايقاف تشغيل الموسيقى \`**
+> \`!pause: ايقاف الموسيقى موقتا\`**
+> \`!resume: اتمام الموسيقى\`
 > \`nowplaying\`, \`queue\`, \`volume\``)
             .setFooter("©️ 2020 X-SPEED#3102", "https://icon-library.com/images/music-bot-icon/music-bot-icon-12.jpg");
         message.channel.send(helpembed);
