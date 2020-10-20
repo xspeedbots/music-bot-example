@@ -47,11 +47,11 @@ bot.on("message", async (message) => { // eslint-disable-line
             .setAuthor(bot.user.tag, bot.user.displayAvatarURL())
             .setDescription(`
 __**Command list**__
-> \`play\` > **\`play [title/url]\`**
-> \`search\` > **\`search [title]\`**
+> \`play\` > **\`play [عنوان/رابط]\`**
+> \`search\` > **\`search [عنوان]\`**
 > \`skip\`, \`stop\`,  \`pause\`, \`resume\`
 > \`nowplaying\`, \`queue\`, \`volume\``)
-            .setFooter("©️ 2020 Zhycorp Nation", "https://api.zhycorp.xyz/assets/images/icon.jpg");
+            .setFooter("©️ 2020 X-SPEED#3102", "https://icon-library.com/images/music-bot-icon/music-bot-icon-12.jpg");
         message.channel.send(helpembed);
     }
     if (command === "play" || command === "p") {
