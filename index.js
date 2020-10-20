@@ -62,12 +62,12 @@ __**Command list**__
                 description: "أعتذر ,لكن يجب عليك ان تكون في قناة صوتية لتشغيل الموسيقى!"
             }
         });
-        const permissions = voiceChannel.permissionsFor(message.client.user);
+       const permissions = voiceChannel.permissionsFor(message.client.user);
         if (!permissions.has("CONNECT")) {
             return message.channel.send({
                 embed: {
                     color: "RED",
-                    description: "أعتذر, لكن ليس لدي الإذن لدخول لهذه القناة الصوتية! "
+                    description: "Sorry, but I need a **`CONNECT`** permission to proceed!"
                 }
             });
         }
@@ -75,14 +75,14 @@ __**Command list**__
             return message.channel.send({
                 embed: {
                     color: "RED",
-                    description: "أعتذر, لكن ليس لدي الإذن لدخول لهذه القناة الصوتية! "
+                    description: "Sorry, but I need a **`SPEAK`** permission to proceed!"
                 }
             });
         }
         if (!url || !searchString) return message.channel.send({
             embed: {
                 color: "RED",
-                description: "الرجاء إدخال رابط / عنوان لتشغيل الموسيقى"
+                description: "Please input link/title to play music"
             }
         });
         if (url.match(/^https?:\/\/(www.youtube.com|youtube.com)\/playlist(.*)$/)) {
@@ -108,7 +108,7 @@ __**Command list**__
                     if (!video) return message.channel.send({
                         embed: {
                             color: "RED",
-                            description: "🆘  **|**  لم أستطع الحصول على أي نتائج بحث
+                            description: "🆘  **|**  I could not obtain any search results"
                         }
                     });
                 } catch (err) {
@@ -116,7 +116,7 @@ __**Command list**__
                     return message.channel.send({
                         embed: {
                             color: "RED",
-                            description: "🆘  **|**  لم أستطع الحصول على أي نتائج بحث
+                            description: "🆘  **|**  I could not obtain any search results"
                         }
                     });
                 }
@@ -129,7 +129,7 @@ __**Command list**__
         if (!voiceChannel) return message.channel.send({
             embed: {
                 color: "RED",
-                description: "أنا آسف ، لكن يجب أن تكون في قناة صوتية لتشغيل موسيقى!"
+                description: "I'm sorry, but you need to be in a voice channel to play a music!"
             }
         });
         const permissions = voiceChannel.permissionsFor(message.client.user);
