@@ -67,7 +67,7 @@ __**Command list**__
             return message.channel.send({
                 embed: {
                     color: "RED",
-                    description: "Sorry, but I need a **`CONNECT`** permission to proceed!"
+                    description: "ليس لدي الحق لدخول"
                 }
             });
         }
@@ -75,7 +75,7 @@ __**Command list**__
             return message.channel.send({
                 embed: {
                     color: "RED",
-                    description: "Sorry, but I need a **`SPEAK`** permission to proceed!"
+                    description: "ليس لدي الحق لدخول"
                 }
             });
         }
