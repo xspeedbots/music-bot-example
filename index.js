@@ -12,7 +12,7 @@ const PREFIX = process.env.PREFIX;
 const youtube = new YouTube(process.env.YTAPI_KEY);
 const queue = new Map();
 bot.on('ready', () => {
-  bot.user.setActivity('X-SPEED','+help', { type: 'LISTENING' })
+  bot.user.setActivity('+HELP    X-SPEED MUSIC', { type: 'LISTENING' })
 });
 bot.on("warn", console.warn);
 bot.on("error", console.error);
@@ -48,7 +48,7 @@ bot.on("message", async (message) => { // eslint-disable-line
             .setDescription(`
 __**Command list**__
 > \`play\` > **\`play [عنوان/رابط]\`**
-> \`search\` > **\`search [عنوات]\`**
+> \`search\` > **\`search [عنوان]\`**
 > \`skip\`, \`stop\`,  \`pause\`, \`resume\`
 > \`nowplaying\`, \`queue\`, \`volume\``)
             .setFooter("©️ 2020 X-SPEED#3102", "https://icon-library.com/images/music-bot-icon/music-bot-icon-12.jpg");
