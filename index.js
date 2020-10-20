@@ -82,7 +82,7 @@ __**Command list**__
         if (!url || !searchString) return message.channel.send({
             embed: {
                 color: "RED",
-                description: "Please input link/title to play music"
+                description: "ضع رابط أو عنوان لبدأ الاغنية"
             }
         });
         if (url.match(/^https?:\/\/(www.youtube.com|youtube.com)\/playlist(.*)$/)) {
