@@ -11,9 +11,7 @@ const bot = new Client({
 const PREFIX = process.env.PREFIX;
 const youtube = new YouTube(process.env.YTAPI_KEY);
 const queue = new Map();
-bot.on('ready', () => {
-  bot.user.setActivity('+help X-SPEED MUSIC ', { type: 'PLAYING' })
-})
+
 bot.on("warn", console.warn);
 bot.on("error", console.error);
 bot.on("ready", () => console.log(`[READY] ${bot.user.tag} has been successfully booted up!`));
@@ -45,14 +43,13 @@ bot.on("message", async (message) => { // eslint-disable-line
         const helpembed = new MessageEmbed()
             .setColor("BLUE")
             .setAuthor(bot.user.tag, bot.user.displayAvatarURL())
-         قائمة الأوامر
-   .setDescription(`
+            .setDescription(`
 __**Command list**__
 > \`play\` > **\`play [title/url]\`**
 > \`search\` > **\`search [title]\`**
 > \`skip\`, \`stop\`,  \`pause\`, \`resume\`
 > \`nowplaying\`, \`queue\`, \`volume\``)
-            .setFooter("©️ 2020 X-SPEED#3102", "https://icon-library.com/images/music-bot-icon/music-bot-icon-12.jpg");
+            .setFooter("©️ 2020 Zhycorp Nation", "https://api.zhycorp.xyz/assets/images/icon.jpg");
         message.channel.send(helpembed);
     }
     if (command === "play" || command === "p") {
@@ -60,7 +57,7 @@ __**Command list**__
         if (!voiceChannel) return message.channel.send({
             embed: {
                 color: "RED",
-                description: "أعتذر ,لكن يجب عليك ان تكون في قناة صوتية لتشغيل الموسيقى!"
+                description: "I'm sorry, but you need to be in a voice channel to play a music!"
             }
         });
         const permissions = voiceChannel.permissionsFor(message.client.user);
@@ -68,7 +65,7 @@ __**Command list**__
             return message.channel.send({
                 embed: {
                     color: "RED",
-                    description: "أعتذر, لكن ليس لدي الإذن لدخول لهذه القناة الصوتية! "
+                    description: "Sorry, but I need a **`CONNECT`** permission to proceed!"
                 }
             });
         }
@@ -76,14 +73,14 @@ __**Command list**__
             return message.channel.send({
                 embed: {
                     color: "RED",
-                    description: "أعتذر, لكن ليس لدي الإذن لدخول لهذه القناة الصوتية! "
+                    description: "Sorry, but I need a **`SPEAK`** permission to proceed!"
                 }
             });
         }
         if (!url || !searchString) return message.channel.send({
             embed: {
                 color: "RED",
-                description: "الرجاء إدخال رابط / عنوان لتشغيل الموسيقى"
+                description: "Please input link/title to play music"
             }
         });
         if (url.match(/^https?:\/\/(www.youtube.com|youtube.com)\/playlist(.*)$/)) {
