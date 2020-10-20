@@ -47,7 +47,7 @@ bot.on("message", async (message) => { // eslint-disable-line
             .setAuthor(bot.user.tag, bot.user.displayAvatarURL())
          قائمة الأوامر
    .setDescription(`
-__**قائمة الأوامر**__
+__**Command list**__
 > \`play\` > **\`play [عنوان/رابط]\`**
 > \`search\` > **\`search [عنوان]\`**
 > \`skip\`, \`stop\`,  \`pause\`, \`resume\`
