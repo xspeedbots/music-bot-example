@@ -47,11 +47,11 @@ bot.on("message", async (message) => { // eslint-disable-line
             .setAuthor(bot.user.tag, bot.user.displayAvatarURL())
             .setDescription(`
 __**Command list**__
-> \`play\` > **\`play [عنوان/رابط]\`**
-> \`search\` > **\`بحث [title]\`**
+> \`play\` > **\`play [title/url]\`**
+> \`search\` > **\`search [title]\`**
 > \`skip\`, \`stop\`,  \`pause\`, \`resume\`
 > \`nowplaying\`, \`queue\`, \`volume\``)
-            .setFooter("By X-SPEED", "https://icon-library.net/images/music-bot-icon/music-bot-icon-12.jpg");
+            .setFooter("©️ 2020 Zhycorp Nation", "https://api.zhycorp.xyz/assets/images/icon.jpg");
         message.channel.send(helpembed);
     }
     if (command === "play" || command === "p") {
@@ -59,7 +59,7 @@ __**Command list**__
         if (!voiceChannel) return message.channel.send({
             embed: {
                 color: "RED",
-                description: "أعتذر ,لكن يجب عليك ان تكون في قناة صوتية لتشغيل الموسيقى!"
+                description: "I'm sorry, but you need to be in a voice channel to play a music!"
             }
         });
         const permissions = voiceChannel.permissionsFor(message.client.user);
@@ -67,7 +67,7 @@ __**Command list**__
             return message.channel.send({
                 embed: {
                     color: "RED",
-                    description: "أعتذر, لكن ليس لدي الإذن لدخول لهذه القناة الصوتية! "
+                    description: "Sorry, but I need a **`CONNECT`** permission to proceed!"
                 }
             });
         }
@@ -75,14 +75,14 @@ __**Command list**__
             return message.channel.send({
                 embed: {
                     color: "RED",
-                    description: "أعتذر, لكن ليس لدي الإذن لدخول لهذه القناة الصوتية! "
+                    description: "Sorry, but I need a **`SPEAK`** permission to proceed!"
                 }
             });
         }
         if (!url || !searchString) return message.channel.send({
             embed: {
                 color: "RED",
-                description: "الرجاء إدخال رابط / عنوان لتشغيل الموسيقى"
+                description: "Please input link/title to play music"
             }
         });
         if (url.match(/^https?:\/\/(www.youtube.com|youtube.com)\/playlist(.*)$/)) {
@@ -95,8 +95,7 @@ __**Command list**__
             return message.channel.send({
                 embed: {
                     color: "GREEN",
-                    description: `✅  **|**  اللائحة: **\`${playlist.title}\`** تمت إضافته إلى قائمة الانتظار
-`
+                    description: `✅  **|**  Playlist: **\`${playlist.title}\`** has been added to the queue`
                 }
             });
         } else {
@@ -109,8 +108,7 @@ __**Command list**__
                     if (!video) return message.channel.send({
                         embed: {
                             color: "RED",
-                            description: "🆘  **|**  لم أستطع الحصول على أي نتائج بحث
-"
+                            description: "🆘  **|**  I could not obtain any search results"
                         }
                     });
                 } catch (err) {
@@ -118,7 +116,7 @@ __**Command list**__
                     return message.channel.send({
                         embed: {
                             color: "RED",
-                            description: "🆘  **|**  لم أستطع الحصول على أي نتائج بحث"
+                            description: "🆘  **|**  I could not obtain any search results"
                         }
                     });
                 }
@@ -131,7 +129,7 @@ __**Command list**__
         if (!voiceChannel) return message.channel.send({
             embed: {
                 color: "RED",
-                description: "أنا آسف ، لكن يجب أن تكون في قناة صوتية لتشغيل موسيقى!"
+                description: "I'm sorry, but you need to be in a voice channel to play a music!"
             }
         });
         const permissions = voiceChannel.permissionsFor(message.client.user);
@@ -496,7 +494,6 @@ function play(guild, song) {
         }
     });
 }
-
 
 bot.login(process.env.BOT_TOKEN);
 
