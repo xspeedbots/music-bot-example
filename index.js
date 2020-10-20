@@ -96,7 +96,7 @@ __**قائمة الأوامر**__
             return message.channel.send({
                 embed: {
                     color: "GREEN",
-                    description: `✅  **|**  قائمة التشغيل: **\`${playlist.title}\`** تمت إضافته إلى قائمة الانتظار`
+                    description: `✅  **|**  Playlist: **\`${playlist.title}\`** has been added to the queue`
                 }
             });
         } else {
