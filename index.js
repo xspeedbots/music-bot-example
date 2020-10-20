@@ -48,8 +48,8 @@ bot.on("message", async (message) => { // eslint-disable-line
          قائمة الأوامر
    .setDescription(`
 __**Command list**__
-> \`play\` > **\`play [عنوان/رابط]\`**
-> \`search\` > **\`search [عنوان]\`**
+> \`play\` > **\`play [title/url]\`**
+> \`search\` > **\`search [title]\`**
 > \`skip\`, \`stop\`,  \`pause\`, \`resume\`
 > \`nowplaying\`, \`queue\`, \`volume\``)
             .setFooter("©️ 2020 X-SPEED#3102", "https://icon-library.com/images/music-bot-icon/music-bot-icon-12.jpg");
