@@ -12,7 +12,7 @@ const PREFIX = process.env.PREFIX;
 const youtube = new YouTube(process.env.YTAPI_KEY);
 const queue = new Map();
 bot.on('ready', () => {
-  bot.user.setActivity('+HELP    X-SPEED MUSIC', { type: 'LISTENING' })
+  bot.user.setActivity('+helpㅤㅤㅤX-SPEED MUSIC', { type: 'LISTENING' })
 });
 bot.on("warn", console.warn);
 bot.on("error", console.error);
@@ -44,7 +44,7 @@ bot.on("message", async (message) => { // eslint-disable-line
     if (command === "help" || command === "cmd") {
         const helpembed = new MessageEmbed()
             .setColor("BLUE")
-            .setAuthor('test')
+            .setAuthor('لائحة الأوامر')
             .setDescription(`
 __**لائحة الأوامر**__
 > \`!play [عنوان/رابط]\`**
