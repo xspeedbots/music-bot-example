@@ -13,7 +13,7 @@ const PREFIX = process.env.PREFIX;
 const youtube = new YouTube(process.env.YTAPI_KEY);
 const queue = new Map();
 bot.on('ready', () => {
-  bot.user.setActivity(`${client.guilds.cache.size}`, { type: 'STREAMING' })
+  client.user.setActivity(`Serving ${client.guilds.cache.size} servers`);
 });
 bot.on("warn", console.warn);
 bot.on("error", console.error);
